@@ -13,15 +13,16 @@ import (
 // Workspace represents a running app.App workspace with its associated
 // resources and state.
 type Workspace struct {
-	ID       string         `json:"id"`
-	Path     string         `json:"path"`
-	YOLO     bool           `json:"yolo,omitempty"`
-	Debug    bool           `json:"debug,omitempty"`
-	DataDir  string         `json:"data_dir,omitempty"`
-	Version  string         `json:"version,omitempty"`
-	ClientID string         `json:"client_id,omitempty"`
-	Config   *config.Config `json:"config,omitempty"`
-	Env      []string       `json:"env,omitempty"`
+	ID               string         `json:"id"`
+	Path             string         `json:"path"`
+	YOLO             bool           `json:"yolo,omitempty"`
+	Debug            bool           `json:"debug,omitempty"`
+	DataDir          string         `json:"data_dir,omitempty"`
+	SystemPromptPath string         `json:"system_prompt_path,omitempty"`
+	Version          string         `json:"version,omitempty"`
+	ClientID         string         `json:"client_id,omitempty"`
+	Config           *config.Config `json:"config,omitempty"`
+	Env              []string       `json:"env,omitempty"`
 	// Skills carries the snapshot of skill discovery state at workspace
 	// creation time. Subsequent updates flow through the SSE event
 	// stream.
